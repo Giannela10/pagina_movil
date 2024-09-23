@@ -1,0 +1,123 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar >
+      <ion-title>Menu </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    
+      Usuario logueado: {{ username }}
+      <ion-item lines="none">
+        <ion-button color="light" >
+          <ion-icon name="settings" slot="start" size="large"></ion-icon>
+          <ion-label>Ajustes</ion-label>
+        </ion-button>
+      </ion-item>
+    
+
+    <ion-list>
+      <ion-item lines="none">
+        <ion-button color="light">
+          <ion-icon name="camera" slot="start" size="large"></ion-icon>
+          <ion-label>Escanear QR</ion-label>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-button color="light" id="present-alert">Generar QR
+      <ion-icon name="qr-code" slot="start" size="large"></ion-icon></ion-button>
+      <ion-alert
+        trigger="present-alert"
+        header="Codigo QR"
+        img src="assets/icon/codigo.png" alt="codigo QR" 
+      ></ion-alert>
+    </ion-list>
+    
+
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Instituto Innovación y Progreso</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<!--inicio de acordion-->
+<ion-accordion-group expand="inset">
+  <ion-accordion value="first">
+    <ion-item slot="header" color="rose">
+      <ion-label>Calificaciones</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+
+      <!--materias -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Programacion de Aplicaciones Moviles</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>Nota parcial 1   --</ion-list>
+          <ion-list>Nota parcial 2   --</ion-list>
+          <ion-list>Nota parcial 3   --</ion-list>
+          <ion-list>Nota final       --</ion-list>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Calidad de software</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>Nota parcial 1      --</ion-list>
+          <ion-list>Nota parcial 2      --</ion-list>
+          <ion-list>Nota parcial 3      --</ion-list>
+          <ion-list>Nota final       --</ion-list>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+  </ion-accordion>
+
+  <ion-accordion value="second">
+    <ion-item slot="header" color="rose">
+      <ion-label>Asistencias</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+
+      <!--asistencia-->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Programacion de Aplicaciones Moviles</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>12/09/2024 -- Presente</ion-list>
+          <ion-list>10/09/2024 -- Presente</ion-list>
+          <ion-list>05/09/2024 -- Presente</ion-list>
+          <ion-list>03/09/2024 -- Presente</ion-list>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Calidad de software</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>14/09/2024 -- Presente</ion-list>
+          <ion-list>04/09/2024 -- Presente</ion-list>
+          <ion-list>28/08/2024 -- Presente</ion-list>
+          <ion-list>21/08/2024 -- Presente</ion-list>
+        </ion-card-content>
+      </ion-card>
+
+
+    </div>
+  </ion-accordion>
+</ion-accordion-group>
+
+<!--boton de camara-->
